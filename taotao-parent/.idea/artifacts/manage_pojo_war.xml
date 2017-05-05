@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="manage-pojo:war">
+    <output-path>$PROJECT_DIR$/../taotao-manage/manage-pojo/target</output-path>
+    <root id="archive" name="manage-pojo.war">
+      <element id="artifact" artifact-name="manage-pojo:war exploded" />
+    </root>
+  </artifact>
+</component>
