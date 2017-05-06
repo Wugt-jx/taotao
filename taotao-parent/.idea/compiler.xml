@@ -10,9 +10,11 @@
         <module name="manage-pojo" />
         <module name="manage-service" />
         <module name="manage-web" />
+        <module name="taotao-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="das" target="1.5" />
       <module name="manage-mapper" target="1.7" />
       <module name="manage-pojo" target="1.7" />
       <module name="manage-service" target="1.7" />

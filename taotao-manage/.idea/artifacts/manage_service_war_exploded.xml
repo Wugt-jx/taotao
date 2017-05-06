@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="manage-service:war exploded">
+    <output-path>$PROJECT_DIR$/manage-service/target/manage-service</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="manage-service" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.wgt:taotao-common:1.0-SNAPSHOT" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/manage-service/target/manage-service/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="manage-service/web/Web" />
+    </root>
+  </artifact>
+</component>
