@@ -36,9 +36,18 @@
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
         </dependency>
-
     </dependencies>
+
     <build>
         <finalName>manage-web</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resource</directory>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+            </resource>
+        </resources>
     </build>
+
 </project>
