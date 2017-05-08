@@ -1,49 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/../taotao-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../taotao-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../taotao-manage" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbContentCategoryMapper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/dao/TbContentCategoryMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/dao/TbContentMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/dao/TbItemCatMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/dao/TbItemDescMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/dao/TbItemMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/dao/TbItemParamItemMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/dao/TbItemParamMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/dao/TbOrderItemMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/dao/TbOrderMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/dao/TbOrderShippingMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/dao/TbUserMapper.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbContentCategoryMapper.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbContentMapper.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbContentMapper.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbItemCatMapper.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbItemCatMapper.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbItemDescMapper.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbItemDescMapper.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbItemMapper.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbItemMapper.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbItemParamItemMapper.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbItemParamItemMapper.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbItemParamMapper.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbItemParamMapper.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbOrderItemMapper.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbOrderItemMapper.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbOrderMapper.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbOrderMapper.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbOrderShippingMapper.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbOrderShippingMapper.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbUserMapper.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-mapper/src/main/java/com/taotao/mapper/TbUserMapper.xml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbContent.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbContentCategory.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbItem.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbItemCat.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbItemDesc.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbItemParam.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbItemParamItem.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbOrder.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbOrderItem.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbOrderShipping.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbUser.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbContent.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbContentCategory.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbItem.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbItemCat.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbItemDesc.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbItemParam.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbItemParamItem.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbOrder.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbOrderItem.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbOrderShipping.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-pojo/src/main/java/com/taotao/pojo/TbUser.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../taotao-manage/manage-web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-web/src/main/webapp/WEB-INF/css" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-web/src/main/webapp/WEB-INF/js" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-web/src/main/webapp/WEB-INF/jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-web/src/main/resource/source/log4j.properties" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-web/src/main/webapp/WEB-INF/jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-web/src/main/webapp/css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../taotao-manage/manage-web/src/main/webapp/js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="PROJECT" charset="GBK" />
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
