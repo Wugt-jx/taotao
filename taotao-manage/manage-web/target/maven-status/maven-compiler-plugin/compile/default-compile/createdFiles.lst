@@ -1,2 +1,4 @@
-com\taotao\Default.class
+com\taotao\controller\TbItemCatController.class
+com\taotao\controller\TbItemController.class
 com\taotao\controller\HelloController.class
+com\taotao\Default.class

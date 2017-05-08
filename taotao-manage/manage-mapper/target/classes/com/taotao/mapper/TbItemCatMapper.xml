@@ -11,4 +11,12 @@
     <result column="created" property="created" jdbcType="TIMESTAMP" />
     <result column="updated" property="updated" jdbcType="TIMESTAMP" />
   </resultMap>
+
+  <sql id="select_all">
+    SELECT id,parent_id,name,status,sort_order,is_parent,created,updated FROM tb_item_cat
+  </sql>
+
+  <select id="selectByParentId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    SELECT id,parent_id,name,status,sort_order,is_parent,created,updated FROM tb_item_cat WHERE parent_id=#{parentId}
+  </select>
 </mapper>

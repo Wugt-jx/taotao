@@ -12,6 +12,9 @@ public class EasyUIDataGridResult<T> {
         this.rows = rows;
     }
 
+    public EasyUIDataGridResult() {
+    }
+
     public Long getTotal() {
         return total;
     }

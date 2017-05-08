@@ -1,3 +1,5 @@
 com\taotao\Default.class
-com\taotao\service\impl\ItemServiceImpl.class
-com\taotao\service\ItemService.class
+com\taotao\service\TbItemCatService.class
+com\taotao\service\impl\TbItemCatServiceImpl.class
+com\taotao\service\impl\TbItemServiceImpl.class
+com\taotao\service\TbItemService.class

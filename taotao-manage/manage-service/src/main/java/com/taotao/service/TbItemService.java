@@ -8,7 +8,10 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/5/8.
  */
-public interface ItemService {
+public interface TbItemService {
+
     public TbItem findById(long id);
+
     public EasyUIDataGridResult<TbItem> selectByLimit(Integer page,Integer rows);
+
 }
