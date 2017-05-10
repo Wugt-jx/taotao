@@ -23,6 +23,8 @@ public class PicController {
     @RequestMapping(value = "/upload",produces = "text/plain;charset=UTF-8")
     public String fileUpload(MultipartFile uploadFile){
         System.out.println("coming");
-        return JSON.toJSONString(picService.fileUpload(uploadFile));
+        String result = JSON.toJSONString(picService.fileUpload(uploadFile));
+        System.out.println(result);
+        return result;
     }
 }

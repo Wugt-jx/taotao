@@ -13,7 +13,11 @@
   </select>
 
   <insert id="insert" parameterType="com.taotao.pojo.TbItemDesc">
-    INSERT INTO item_desc VALUES (#{itemId},#{itemDesc},#{created},#{updated})
+    INSERT INTO tb_item_desc VALUES (#{itemId},#{itemDesc},#{created},#{updated})
+  </insert>
+
+  <insert id="update" parameterType="com.taotao.pojo.TbItemDesc">
+    UPDATE tb_item_desc SET item_desc=#{itemDesc},updated=${updated} WHERE item_id=${itemId}
   </insert>
 
 </mapper>

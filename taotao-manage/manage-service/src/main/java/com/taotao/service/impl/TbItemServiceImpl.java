@@ -21,7 +21,7 @@ import java.util.List;
  * Created by Administrator on 2017/5/8.
  */
 @Service
-public class TbItemServiceImpl implements TbItemService  {
+public class TbItemServiceImpl implements TbItemService {
 
     @SuppressWarnings("SpringJavaAutowiringInspection")
     @Autowired
@@ -42,21 +42,22 @@ public class TbItemServiceImpl implements TbItemService  {
 
     @Override
     public EasyUIDataGridResult<TbItem> selectByLimit(Integer page, Integer rows) {
-        PageHelper.startPage(page,rows);
+        PageHelper.startPage(page, rows);
         List<TbItem> tbItems = itemMapper.SelectByLimit();
         PageInfo<TbItem> pageInfo = new PageInfo<TbItem>(tbItems);
         long total = pageInfo.getTotal();
-        EasyUIDataGridResult<TbItem> result = new EasyUIDataGridResult<TbItem>(total,tbItems);
+        EasyUIDataGridResult<TbItem> result = new EasyUIDataGridResult<TbItem>(total, tbItems);
 
-        return  result;
+        return result;
     }
 
     @Override
+    @Transactional
     public TaoTaoResult insert(TbItem item, String desc) {
-        if (item==null){
+        if (item == null) {
             throw new NullPointerException("item is null!");
         }
-        if (desc==null||"".equals(desc.trim())){
+        if (desc == null || "".equals(desc.trim())) {
             return insert(item);
         }
         Date date = new Date();
@@ -64,8 +65,11 @@ public class TbItemServiceImpl implements TbItemService  {
         item.setStatus(true);
         item.setCreated(date);
         item.setUpdated(date);
+
         itemDesc.setItemId(item.getId());
         itemDesc.setItemDesc(desc);
+        itemDesc.setCreated(date);
+        itemDesc.setUpdated(date);
         itemMapper.insert(item);
         itemDescMapper.insert(itemDesc);
         return TaoTaoResult.ok();
@@ -76,7 +80,7 @@ public class TbItemServiceImpl implements TbItemService  {
     @Transactional
     public TaoTaoResult insert(TbItem item) {
 
-        if (item==null){
+        if (item == null) {
             throw new NullPointerException("item is null");
         }
         Date date = new Date();
@@ -85,6 +89,36 @@ public class TbItemServiceImpl implements TbItemService  {
         item.setCreated(date);
         item.setUpdated(date);
         itemMapper.insert(item);
+        return TaoTaoResult.ok();
+    }
+
+    @Override
+    @Transactional
+    public TaoTaoResult update(TbItem item, String desc) {
+        if (item == null) {
+            throw new NullPointerException("item is null");
+        }
+        if (desc == null || "".equals(desc.trim())) {
+            return update(item);
+        }
+        Date date = new Date();
+        item.setUpdated(date);
+        itemDesc.setItemDesc(desc);
+        itemDesc.setUpdated(date);
+        itemMapper.update(item);
+        itemDescMapper.update(itemDesc);
+        return TaoTaoResult.ok();
+    }
+
+    @Override
+    @Transactional
+    public TaoTaoResult update(TbItem item) {
+        if (item == null) {
+            throw new NullPointerException("item is null");
+        }
+        Date date = new Date();
+        item.setUpdated(date);
+        itemMapper.update(item);
         return TaoTaoResult.ok();
     }
 

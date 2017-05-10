@@ -1,5 +1,8 @@
 package com.taotao.pojo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class TbOrderItem {
     private String id;
 

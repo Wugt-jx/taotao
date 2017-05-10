@@ -17,6 +17,8 @@ import java.util.Date;
 @Service
 public class PicServiceImpl implements PicService {
 
+    @Value("${IMAGE_BASE_URL}")
+    private String IMAGE_BASE_URL;
     @Value("${FILI_UPLOAD_PATH}")
     private String FILI_UPLOAD_PATH;
     @Value("${FTP_SERVER_IP}")
@@ -31,14 +33,15 @@ public class PicServiceImpl implements PicService {
 
     @Override
     public PicResult fileUpload(MultipartFile uploadFile) {
-        //String result = saveFile(uploadFile);
-        //System.out.println(result);
-        PicResult picResult = new PicResult(0,"http://112.74.27.58/image/load.jpg","上传成功！");
-        /*if (result==null){
+        String result = saveFile(uploadFile);
+        System.out.println(result);
+        PicResult picResult = null;
+        if (result==null){
             picResult = new PicResult(1,"","上传失败！");
         }else {
-            picResult = new PicResult(1,result,"上传成功！");
-        }*/
+            picResult = new PicResult(0,result,"上传成功！");
+        }
+
         return picResult;
     }
 
@@ -52,14 +55,13 @@ public class PicServiceImpl implements PicService {
             String filePath = "/" + new SimpleDateFormat("yyyy").format(new Date()) + "/"
                     + new SimpleDateFormat("MM").format(new Date()) + "/"
                     + new SimpleDateFormat("dd").format(new Date());
-
             String originalFilename = saveFile.getOriginalFilename();
 
             String newFileName = IDUtils.genImageName() + originalFilename.substring(originalFilename.lastIndexOf("."));
 
             FtpUtil.uploadFile(FTP_SERVER_IP, FTP_SERVER_PORT, FTP_SERVER_USERNAME, FTP_SERVER_PASSWORD,
                     FILI_UPLOAD_PATH, filePath, newFileName, saveFile.getInputStream());
-            result = filePath + "/" + newFileName;
+            result = "http://112.74.27.58"+filePath + "/" + newFileName;
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -1,7 +1,10 @@
 package com.taotao.pojo;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 
+@Component
 public class TbOrder {
     private String orderId;
 

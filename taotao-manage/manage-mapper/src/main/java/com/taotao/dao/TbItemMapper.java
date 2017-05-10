@@ -15,4 +15,6 @@ public interface TbItemMapper {
 
     public void insert(TbItem item);
 
+    public void update(TbItem item);
+
 }

@@ -18,4 +18,8 @@ public interface TbItemService {
     public TaoTaoResult insert(TbItem item,String desc);
 
     public TaoTaoResult insert(TbItem item);
+
+    public TaoTaoResult update(TbItem item,String desc);
+
+    public TaoTaoResult update(TbItem item);
 }
