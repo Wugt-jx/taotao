@@ -7,4 +7,7 @@
     <result column="updated" property="updated" jdbcType="TIMESTAMP" />
   </resultMap>
 
+  <select id="findDescById" parameterType="java.lang.Long" resultType="java.lang.String">
+    SELECT item_desc FROM tb_item_desc WHERE item_id=#{id}
+  </select>
 </mapper>

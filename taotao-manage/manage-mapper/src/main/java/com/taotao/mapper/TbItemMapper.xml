@@ -28,4 +28,7 @@
         SELECT id,title,sell_point,price,num,barcode,image,cid,status,created,updated FROM tb_item
     </select>
 
+    <insert id="insert" parameterType="com.taotao.pojo.TbItem">
+      INSERT INTO tb_item VALUES (#{id},#{title},#{sellPoint},#{price},#{num},#{barcode},#{image},#{cid},#{status},#{created},#{updated})
+    </insert>
 </mapper>

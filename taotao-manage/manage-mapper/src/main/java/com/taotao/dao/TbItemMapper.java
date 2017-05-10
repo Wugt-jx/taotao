@@ -12,4 +12,7 @@ public interface TbItemMapper {
 
 
     public List<TbItem> SelectByLimit();
+
+    public void insert(TbItem item);
+
 }

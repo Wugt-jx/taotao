@@ -23,7 +23,6 @@ public class TbItemCatController {
     @RequestMapping(value = "/list",method = RequestMethod.POST,produces = "text/plain;charset=UTF-8")
     @ResponseBody
     public String selectByParentId(@RequestParam(value="id",defaultValue = "0") Long parentId){
-
         List<EasyUITreeNodeResult> results = itemCatService.selectByParentId(parentId);
         return JSON.toJSONString(results);
     }

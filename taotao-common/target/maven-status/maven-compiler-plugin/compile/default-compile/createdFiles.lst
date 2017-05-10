@@ -1,2 +1,6 @@
+pojo\PicResult.class
+util\FtpUtil.class
 pojo\EasyUIDataGridResult.class
+pojo\TaoTaoResult.class
+util\IDUtils.class
 pojo\EasyUITreeNodeResult.class

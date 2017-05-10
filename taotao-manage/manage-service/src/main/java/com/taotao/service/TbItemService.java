@@ -2,6 +2,7 @@ package com.taotao.service;
 
 import com.taotao.pojo.TbItem;
 import pojo.EasyUIDataGridResult;
+import pojo.TaoTaoResult;
 
 import java.util.List;
 
@@ -14,4 +15,7 @@ public interface TbItemService {
 
     public EasyUIDataGridResult<TbItem> selectByLimit(Integer page,Integer rows);
 
+    public TaoTaoResult insert(TbItem item,String desc);
+
+    public TaoTaoResult insert(TbItem item);
 }

@@ -17,7 +17,7 @@
         </tr>
     </thead>
 </table>
-<div id="itemEditWindow" class="easyui-window" title="编辑商品" data-options="modal:true,closed:true,iconCls:'icon-save',href:'/rest/page/item-edit'" style="width:80%;height:80%;padding:10px;">
+<div id="itemEditWindow" class="easyui-window" title="编辑商品" data-options="modal:true,closed:true,iconCls:'icon-save',href:'/item-edit.action'" style="width:80%;height:80%;padding:10px;">
 </div>
 <script>
 
@@ -59,14 +59,15 @@
         			data.priceView = TAOTAO.formatPrice(data.price);
         			$("#itemeEditForm").form("load",data);
         			
-        			// 加载商品描述
-        			$.getJSON('/rest/item/query/item/desc/'+data.id,function(_data){
+        			// 加载商品描述'/itemDesc/getDesc'+data.id+".action"
+        			$.getJSON('/itemDesc/getDesc/'+data.id+'.action',function(_data){
         				if(_data.status == 200){
+        			        alert(_data.data);
         					//UM.getEditor('itemeEditDescEditor').setContent(_data.data.itemDesc, false);
-        					itemEditEditor.html(_data.data.itemDesc);
+        					itemEditEditor.html(_data.data);
         				}
         			});
-        			
+
         			//加载商品规格
         			$.getJSON('/rest/item/param/item/query/'+data.id,function(_data){
         				if(_data && _data.status == 200 && _data.data && _data.data.paramData){
