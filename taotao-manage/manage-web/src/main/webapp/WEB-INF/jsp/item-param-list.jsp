@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<table class="easyui-datagrid" id="itemParamList" title="商品列表" 
-       data-options="singleSelect:false,collapsible:true,pagination:true,url:'/item/param/list',method:'get',pageSize:30,toolbar:itemParamListToolbar">
+<table class="easyui-datagrid" id="itemParamList" title="商品参数列表"
+       data-options="singleSelect:false,collapsible:true,pagination:true,url:'/item/param/list.action',method:'get',pageSize:30,toolbar:itemParamListToolbar">
     <thead>
         <tr>
         	<th data-options="field:'ck',checkbox:true"></th>
@@ -31,6 +31,8 @@
     	var sels = itemList.datagrid("getSelections");
     	var ids = [];
     	for(var i in sels){
+    	    var a = sels[i].id;
+    	    alert(a);
     		ids.push(sels[i].id);
     	}
     	ids = ids.join(",");
@@ -42,7 +44,7 @@
         iconCls:'icon-add',
         handler:function(){
         	TAOTAO.createWindow({
-        		url : "/item-param-add",
+        		url : "/item-param-add.action",
         	});
         }
     },{

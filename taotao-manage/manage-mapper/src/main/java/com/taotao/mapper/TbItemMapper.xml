@@ -35,6 +35,6 @@
     <update id="update" parameterType="com.taotao.pojo.TbItem">
       UPDATE tb_item SET title=#{title},sell_point=#{sellPoint},
                           price=#{price},num=#{num},barcode=#{barcode},
-                          image=${image},cid=${cid},updated=#{updated} WHERE id=#{id}
+                          image=#{image},cid=#{cid},updated=#{updated} WHERE id=#{id}
     </update>
 </mapper>

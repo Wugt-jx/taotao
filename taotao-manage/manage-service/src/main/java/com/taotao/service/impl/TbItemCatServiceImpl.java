@@ -17,6 +17,11 @@ public class TbItemCatServiceImpl implements TbItemCatService {
     @Autowired
     private TbItemCatMapper itemCatMapper;
 
+    /***
+     * 商品类目列表查询
+     * @param id
+     * @return
+     */
     @Override
     public List<EasyUITreeNodeResult> selectByParentId(long id) {
 

@@ -103,6 +103,7 @@ public class TbItemServiceImpl implements TbItemService {
         }
         Date date = new Date();
         item.setUpdated(date);
+        itemDesc.setItemId(item.getId());
         itemDesc.setItemDesc(desc);
         itemDesc.setUpdated(date);
         itemMapper.update(item);

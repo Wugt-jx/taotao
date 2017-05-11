@@ -43,7 +43,7 @@ public class TbItemController {
     @ResponseBody
     @RequestMapping(value = "/save",method = RequestMethod.POST)
     public String saveItem(TbItem item,@Param("desc")String desc){
-        TaoTaoResult taoTaoResult = itemService.insert(item);
+        TaoTaoResult taoTaoResult = itemService.insert(item,desc);
         String result = JSON.toJSONString(taoTaoResult);
         return result;
     }
@@ -54,6 +54,7 @@ public class TbItemController {
     public String update(TbItem item,@Param("desc")String desc){
         TaoTaoResult taoTaoResult = itemService.update(item,desc);
         String result = JSON.toJSONString(taoTaoResult);
+        System.out.println(result);
         return result;
     }
 }
