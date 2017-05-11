@@ -8,6 +8,7 @@ import pojo.PicResult;
 import util.FtpUtil;
 import util.IDUtils;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -34,7 +35,6 @@ public class PicServiceImpl implements PicService {
     @Override
     public PicResult fileUpload(MultipartFile uploadFile) {
         String result = saveFile(uploadFile);
-        System.out.println(result);
         PicResult picResult = null;
         if (result==null){
             picResult = new PicResult(1,"","上传失败！");
@@ -45,27 +45,26 @@ public class PicServiceImpl implements PicService {
         return picResult;
     }
 
-    public String saveFile(MultipartFile saveFile){
+    public String saveFile(MultipartFile saveFile) {
         String result = null;
+        if (saveFile.isEmpty())
+            return null;
 
+        String filePath = "/" + new SimpleDateFormat("yyyy").format(new Date()) + "/"
+                + new SimpleDateFormat("MM").format(new Date()) + "/"
+                + new SimpleDateFormat("dd").format(new Date());
+        String originalFilename = saveFile.getOriginalFilename();
+
+        String newFileName = IDUtils.genImageName() + originalFilename.substring(originalFilename.lastIndexOf("."));
         try {
-            if (saveFile.isEmpty())
-                return null;
-
-            String filePath = "/" + new SimpleDateFormat("yyyy").format(new Date()) + "/"
-                    + new SimpleDateFormat("MM").format(new Date()) + "/"
-                    + new SimpleDateFormat("dd").format(new Date());
-            String originalFilename = saveFile.getOriginalFilename();
-
-            String newFileName = IDUtils.genImageName() + originalFilename.substring(originalFilename.lastIndexOf("."));
-
-            FtpUtil.uploadFile(FTP_SERVER_IP, FTP_SERVER_PORT, FTP_SERVER_USERNAME, FTP_SERVER_PASSWORD,
+            boolean success =  FtpUtil.uploadFile(FTP_SERVER_IP, FTP_SERVER_PORT, FTP_SERVER_USERNAME, FTP_SERVER_PASSWORD,
                     FILI_UPLOAD_PATH, filePath, newFileName, saveFile.getInputStream());
-            result = "http://112.74.27.58"+filePath + "/" + newFileName;
-        } catch (Exception e) {
+            if (success) {
+                result = IMAGE_BASE_URL + filePath + "/" + newFileName;
+            }
+        } catch (IOException e) {
             e.printStackTrace();
         }
-
         return result;
 
     }

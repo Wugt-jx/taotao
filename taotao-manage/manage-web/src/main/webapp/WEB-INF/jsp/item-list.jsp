@@ -62,7 +62,6 @@
         			// 加载商品描述'/itemDesc/getDesc'+data.id+".action"
         			$.getJSON('/itemDesc/getDesc/'+data.id+'.action',function(_data){
         				if(_data.status == 200){
-        			        alert(_data.data);
         					//UM.getEditor('itemeEditDescEditor').setContent(_data.data.itemDesc, false);
         					itemEditEditor.html(_data.data);
         				}

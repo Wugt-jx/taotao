@@ -50,9 +50,10 @@ public class TbItemController {
 
 
     @ResponseBody
-    @RequestMapping(value = "/toUpdate",method = RequestMethod.GET)
-    public TbItem toUpdatePage(@Param("id")Long id){
-        System.out.println(id);
-        return null;
+    @RequestMapping(value = "/update",method = RequestMethod.POST)
+    public String update(TbItem item,@Param("desc")String desc){
+        TaoTaoResult taoTaoResult = itemService.update(item,desc);
+        String result = JSON.toJSONString(taoTaoResult);
+        return result;
     }
 }
