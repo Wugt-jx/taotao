@@ -4,8 +4,13 @@
   <resultMap id="BaseResultMap" type="com.taotao.pojo.TbItemParamItem" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="item_id" property="itemId" jdbcType="BIGINT" />
+    <result column="param_data" property="paramData" javaType="java.lang.String"/>
     <result column="created" property="created" jdbcType="TIMESTAMP" />
     <result column="updated" property="updated" jdbcType="TIMESTAMP" />
   </resultMap>
 
+  <insert id="insert" parameterType="com.taotao.pojo.TbItemParamItem">
+    INSERT INTO tb_item_param_item(item_id,param_data,created,updated)
+    VALUES (#{itemId},#{paramData},#{created},#{updated})
+  </insert>
 </mapper>

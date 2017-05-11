@@ -17,4 +17,19 @@
     SELECT id,item_cat_id,param_data,created,updated FROM tb_item_param WHERE item_cat_id=#{id}
   </select>
 
+  <insert id="insert" parameterType="com.taotao.pojo.TbItemParam">
+    INSERT INTO tb_item_param VALUES (#{id},#{itemCatId},#{paramData},#{created},#{updated})
+  </insert>
+
+  <!--
+  <update id="update" parameterType="com.taotao.pojo.TbItemParam">
+    UPDATE tb_item_param
+    SET item_cat_id=#{itemCatId},param_data=#{paramData},updated=#{updated}
+    WHERE id=#{id}
+  </update>
+  -->
+
+  <delete id="delete" parameterType="java.lang.Long">
+    DELETE FROM tb_item_param WHERE id=#{id}
+  </delete>
 </mapper>

@@ -1,6 +1,8 @@
 package com.taotao.dao;
 
 
-public interface TbItemParamItemMapper {
+import com.taotao.pojo.TbItemParamItem;
 
+public interface TbItemParamItemMapper {
+    public void insert(TbItemParamItem itemParams);
 }

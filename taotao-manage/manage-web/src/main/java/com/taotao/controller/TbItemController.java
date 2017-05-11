@@ -3,7 +3,6 @@ package com.taotao.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;
 import com.taotao.pojo.TbItem;
 import com.taotao.service.TbItemService;
 import org.apache.ibatis.annotations.Param;
@@ -42,8 +41,8 @@ public class TbItemController {
 
     @ResponseBody
     @RequestMapping(value = "/save",method = RequestMethod.POST)
-    public String saveItem(TbItem item,@Param("desc")String desc){
-        TaoTaoResult taoTaoResult = itemService.insert(item,desc);
+    public String saveItem(TbItem item,@Param("desc")String desc,String itemParams){
+        TaoTaoResult taoTaoResult = itemService.insert(item,desc,itemParams);
         String result = JSON.toJSONString(taoTaoResult);
         return result;
     }

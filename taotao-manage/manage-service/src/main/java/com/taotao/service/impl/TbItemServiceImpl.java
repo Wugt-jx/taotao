@@ -4,8 +4,10 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.taotao.dao.TbItemDescMapper;
 import com.taotao.dao.TbItemMapper;
+import com.taotao.dao.TbItemParamItemMapper;
 import com.taotao.pojo.TbItem;
 import com.taotao.pojo.TbItemDesc;
+import com.taotao.pojo.TbItemParamItem;
 import com.taotao.service.TbItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,7 +35,14 @@ public class TbItemServiceImpl implements TbItemService {
 
     @SuppressWarnings("SpringJavaAutowiringInspection")
     @Autowired
+    private TbItemParamItemMapper itemParamItemMapper;
+
+    @SuppressWarnings("SpringJavaAutowiringInspection")
+    @Autowired
     private TbItemDesc itemDesc;
+
+    @Autowired
+    private TbItemParamItem itemParamItem;
 
     @Override
     public TbItem findById(long id) {
@@ -53,12 +62,15 @@ public class TbItemServiceImpl implements TbItemService {
 
     @Override
     @Transactional
-    public TaoTaoResult insert(TbItem item, String desc) {
+    public TaoTaoResult insert(TbItem item, String desc,String itemParams) {
         if (item == null) {
             throw new NullPointerException("item is null!");
         }
         if (desc == null || "".equals(desc.trim())) {
             return insert(item);
+        }
+        if (itemParams==null ||"".equals(itemParams.trim())){
+            throw new NullPointerException("itemParam is null");
         }
         Date date = new Date();
         item.setId(IDUtils.genItemId());
@@ -70,8 +82,16 @@ public class TbItemServiceImpl implements TbItemService {
         itemDesc.setItemDesc(desc);
         itemDesc.setCreated(date);
         itemDesc.setUpdated(date);
+
+        itemParamItem.setItemId(item.getId());
+        itemParamItem.setParamData(itemParams);
+        itemParamItem.setCreated(date);
+        itemParamItem.setUpdated(date);
+
         itemMapper.insert(item);
         itemDescMapper.insert(itemDesc);
+        itemParamItemMapper.insert(itemParamItem);
+
         return TaoTaoResult.ok();
     }
 

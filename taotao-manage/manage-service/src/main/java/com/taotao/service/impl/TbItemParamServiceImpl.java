@@ -7,9 +7,11 @@ import com.taotao.pojo.TbItemParam;
 import com.taotao.service.TbItemParamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import pojo.EasyUIDataGridResult;
 import pojo.TaoTaoResult;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -22,6 +24,9 @@ public class TbItemParamServiceImpl implements TbItemParamService {
     @SuppressWarnings("SpringJavaAutowiringInspection")
     @Autowired
     private TbItemParamMapper itemParamMapper;
+
+    @Autowired
+    private TbItemParam tbItemParam;
 
     @Override
     public TaoTaoResult<TbItemParam> selectByItemCatId(Long item_cat_id) {
@@ -41,6 +46,32 @@ public class TbItemParamServiceImpl implements TbItemParamService {
         long total = pageInfo.getTotal();
         EasyUIDataGridResult<TbItemParam> result = new EasyUIDataGridResult<>(total,tbItemParams);
         return result;
+    }
+
+    @Override
+    @Transactional
+    public TaoTaoResult insert(Long itemCatId, String paramData) {
+        Date date = new Date();
+        tbItemParam.setItemCatId(itemCatId);
+        tbItemParam.setParamData(paramData);
+        tbItemParam.setCreated(date);
+        tbItemParam.setUpdated(date);
+        itemParamMapper.insert(tbItemParam);
+        return TaoTaoResult.ok();
+    }
+
+    @Override
+    @Transactional
+    public TaoTaoResult delete(Long[] ids) {
+        if (ids==null||ids.length==0) throw new NullPointerException("id is null");
+        for (Long id:ids){itemParamMapper.delete(id);}
+        return TaoTaoResult.ok();
+    }
+
+
+    // @Override
+    public TaoTaoResult update(TbItemParam itemParam) {
+        return null;
     }
 
 

@@ -15,7 +15,7 @@ public interface TbItemService {
 
     public EasyUIDataGridResult<TbItem> selectByLimit(Integer page,Integer rows);
 
-    public TaoTaoResult insert(TbItem item,String desc);
+    public TaoTaoResult insert(TbItem item,String desc,String itemParam);
 
     public TaoTaoResult insert(TbItem item);
 
