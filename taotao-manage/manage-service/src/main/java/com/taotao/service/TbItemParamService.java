@@ -1,7 +1,6 @@
-package com.taotao.service;
+package com.taotao.rest.service;
 
-import com.taotao.pojo.TbItem;
-import com.taotao.pojo.TbItemParam;
+import com.taotao.rest.pojo.TbItemParam;
 import pojo.EasyUIDataGridResult;
 import pojo.TaoTaoResult;
 

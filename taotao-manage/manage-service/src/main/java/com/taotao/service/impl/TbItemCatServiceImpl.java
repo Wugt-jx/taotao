@@ -1,8 +1,8 @@
-package com.taotao.service.impl;
+package com.taotao.rest.service.impl;
 
-import com.taotao.dao.TbItemCatMapper;
-import com.taotao.pojo.TbItemCat;
-import com.taotao.service.TbItemCatService;
+import com.taotao.rest.dao.TbItemCatMapper;
+import com.taotao.rest.pojo.TbItemCat;
+import com.taotao.rest.service.TbItemCatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pojo.EasyUITreeNodeResult;

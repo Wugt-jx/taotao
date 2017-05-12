@@ -1,14 +1,10 @@
-package com.taotao.service;
+package com.taotao.rest.service;
 
-import com.taotao.pojo.TbItem;
+import com.taotao.rest.pojo.TbItem;
+import com.taotao.rest.pojo.TbItemParamItem;
 import pojo.EasyUIDataGridResult;
 import pojo.TaoTaoResult;
 
-import java.util.List;
-
-/**
- * Created by Administrator on 2017/5/8.
- */
 public interface TbItemService {
 
     public TbItem findById(long id);
@@ -17,9 +13,7 @@ public interface TbItemService {
 
     public TaoTaoResult insert(TbItem item,String desc,String itemParam);
 
-    public TaoTaoResult insert(TbItem item);
+    public TaoTaoResult update(TbItem item, String desc, TbItemParamItem itemParams);
 
-    public TaoTaoResult update(TbItem item,String desc);
-
-    public TaoTaoResult update(TbItem item);
+    public TaoTaoResult delete(Long[] ids);
 }

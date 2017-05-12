@@ -1,4 +1,4 @@
-package com.taotao.pojo;
+package com.taotao.rest.pojo;
 
 import org.springframework.stereotype.Component;
 

@@ -1,11 +1,11 @@
-package com.taotao.controller;
+package com.taotao.rest.controller;
 
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.taotao.pojo.TbItem;
-import com.taotao.service.TbItemService;
-import org.apache.ibatis.annotations.Param;
+import com.taotao.rest.pojo.TbItem;
+import com.taotao.rest.pojo.TbItemParamItem;
+import com.taotao.rest.service.TbItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +19,10 @@ public class TbItemController {
     @Autowired
     private TbItemService itemService;
 
-    @RequestMapping(value = "/findById/{itemId}",method = RequestMethod.GET)
+    @Autowired
+    private TbItemParamItem itemParamItem;
+
+    @RequestMapping(value = "/findById/{itemId}",method = RequestMethod.GET,produces = "text/plain;charset=UTF-8")
     @ResponseBody
     public String findById(@PathVariable Long itemId){
         TbItem item = itemService.findById(itemId);
@@ -41,7 +44,7 @@ public class TbItemController {
 
     @ResponseBody
     @RequestMapping(value = "/save",method = RequestMethod.POST)
-    public String saveItem(TbItem item,@Param("desc")String desc,String itemParams){
+    public String saveItem(TbItem item,String desc,String itemParams){
         TaoTaoResult taoTaoResult = itemService.insert(item,desc,itemParams);
         String result = JSON.toJSONString(taoTaoResult);
         return result;
@@ -50,10 +53,21 @@ public class TbItemController {
 
     @ResponseBody
     @RequestMapping(value = "/update",method = RequestMethod.POST)
-    public String update(TbItem item,@Param("desc")String desc){
-        TaoTaoResult taoTaoResult = itemService.update(item,desc);
+    public String update(TbItem item, String desc, String itemParams,Long itemParamId){
+        itemParamItem.setId(itemParamId);
+        itemParamItem.setParamData(itemParams);
+        TaoTaoResult taoTaoResult = itemService.update(item,desc,itemParamItem);
         String result = JSON.toJSONString(taoTaoResult);
         System.out.println(result);
+        return result;
+    }
+
+
+    @ResponseBody
+    @RequestMapping(value = "/delete",method = RequestMethod.POST,produces = "text/plain;charset=UTF-8")
+    public String delete(Long[] ids){
+        TaoTaoResult taoTaoResult = itemService.delete(ids);
+        String result = JSON.toJSONString(taoTaoResult);
         return result;
     }
 }

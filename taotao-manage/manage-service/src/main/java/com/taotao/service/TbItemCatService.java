@@ -1,4 +1,4 @@
-package com.taotao.service;
+package com.taotao.rest.service;
 
 import pojo.EasyUITreeNodeResult;
 

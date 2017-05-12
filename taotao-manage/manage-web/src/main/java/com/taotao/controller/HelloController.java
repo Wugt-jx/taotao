@@ -1,4 +1,4 @@
-package com.taotao.controller;
+package com.taotao.rest.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

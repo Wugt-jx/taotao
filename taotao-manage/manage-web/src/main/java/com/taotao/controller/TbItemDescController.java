@@ -1,8 +1,7 @@
-package com.taotao.controller;
+package com.taotao.rest.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.taotao.service.TbItemDescService;
-import org.apache.ibatis.annotations.Param;
+import com.taotao.rest.service.TbItemDescService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +20,7 @@ public class TbItemDescController {
     private TbItemDescService itemDescService;
 
     @ResponseBody
-    @RequestMapping("/getDesc/{id}")
+    @RequestMapping(value = "/getDesc/{id}",produces = "text/plain;charset=UTF-8")
     public String getDesc(@PathVariable Long id){
         TaoTaoResult taoTaoResult = TaoTaoResult.ok(itemDescService.findDescById(id));
         String result = JSON.toJSONString(taoTaoResult);

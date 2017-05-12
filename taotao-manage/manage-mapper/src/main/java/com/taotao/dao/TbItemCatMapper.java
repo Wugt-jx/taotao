@@ -1,7 +1,8 @@
-package com.taotao.dao;
+package com.taotao.rest.dao;
 
 
-import com.taotao.pojo.TbItemCat;
+import com.taotao.rest.pojo.TbItemCat;
+
 import java.util.List;
 
 public interface TbItemCatMapper {

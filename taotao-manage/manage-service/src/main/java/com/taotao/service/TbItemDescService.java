@@ -1,7 +1,4 @@
-package com.taotao.service;
-
-import com.taotao.pojo.TbItem;
-import com.taotao.pojo.TbItemDesc;
+package com.taotao.rest.service;
 
 /**
  * Created by Administrator on 2017/5/10.

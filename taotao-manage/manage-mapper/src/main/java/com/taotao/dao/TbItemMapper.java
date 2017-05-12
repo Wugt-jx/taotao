@@ -1,7 +1,7 @@
-package com.taotao.dao;
+package com.taotao.rest.dao;
 
 
-import com.taotao.pojo.TbItem;
+import com.taotao.rest.pojo.TbItem;
 
 import java.util.List;
 
@@ -17,4 +17,5 @@ public interface TbItemMapper {
 
     public void update(TbItem item);
 
+    public void delete(Long id);
 }

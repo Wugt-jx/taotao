@@ -1,11 +1,9 @@
-package com.taotao.service.impl;
+package com.taotao.rest.service.impl;
 
-import com.taotao.dao.TbItemDescMapper;
-import com.taotao.pojo.TbItemDesc;
-import com.taotao.service.TbItemDescService;
+import com.taotao.rest.dao.TbItemDescMapper;
+import com.taotao.rest.service.TbItemDescService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by Administrator on 2017/5/10.

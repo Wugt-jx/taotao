@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.taotao.dao.TbContentMapper" >
-  <resultMap id="BaseResultMap" type="com.taotao.pojo.TbContent" >
+<mapper namespace="com.taotao.rest.dao.TbContentMapper" >
+  <resultMap id="BaseResultMap" type="com.taotao.rest.pojo.TbContent" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="category_id" property="categoryId" jdbcType="BIGINT" />
     <result column="title" property="title" jdbcType="VARCHAR" />
