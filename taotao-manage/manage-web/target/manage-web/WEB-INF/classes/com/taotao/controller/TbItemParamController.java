@@ -1,8 +1,8 @@
-package com.taotao.rest.controller;
+package com.taotao.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.taotao.rest.pojo.TbItemParam;
-import com.taotao.rest.service.TbItemParamService;
+import com.taotao.pojo.TbItemParam;
+import com.taotao.service.TbItemParamService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

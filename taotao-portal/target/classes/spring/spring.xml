@@ -8,6 +8,8 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
     <context:property-placeholder location="classpath:source/*.properties" />
+
+    <import resource="applicationContext-service.xml"></import>
     <!--spring文件配置
     <import resource="applicationContext-pojo.xml"></import>
     <import resource="applicationContext-dao.xml"></import>

@@ -1,7 +1,7 @@
-package com.taotao.rest.controller;
+package com.taotao.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.taotao.rest.service.TbItemDescService;
+import com.taotao.service.TbItemDescService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

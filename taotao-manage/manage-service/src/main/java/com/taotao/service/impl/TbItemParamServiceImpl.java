@@ -1,10 +1,10 @@
-package com.taotao.rest.service.impl;
+package com.taotao.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.taotao.rest.dao.TbItemParamMapper;
-import com.taotao.rest.pojo.TbItemParam;
-import com.taotao.rest.service.TbItemParamService;
+import com.taotao.dao.TbItemParamMapper;
+import com.taotao.pojo.TbItemParam;
+import com.taotao.service.TbItemParamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

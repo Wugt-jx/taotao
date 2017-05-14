@@ -1,7 +1,7 @@
-package com.taotao.rest.dao;
+package com.taotao.dao;
 
 
-import com.taotao.rest.pojo.TbItemParamItem;
+import com.taotao.pojo.TbItemParamItem;
 
 public interface TbItemParamItemMapper {
     public void insert(TbItemParamItem itemParams);

@@ -1,7 +1,7 @@
-package com.taotao.rest.dao;
+package com.taotao.dao;
 
 
-import com.taotao.rest.pojo.TbItem;
+import com.taotao.pojo.TbItem;
 
 import java.util.List;
 

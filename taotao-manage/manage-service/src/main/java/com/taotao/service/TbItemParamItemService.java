@@ -1,6 +1,6 @@
-package com.taotao.rest.service;
+package com.taotao.service;
 
-import com.taotao.rest.pojo.TbItemParamItem;
+import com.taotao.pojo.TbItemParamItem;
 import pojo.TaoTaoResult;
 
 /**

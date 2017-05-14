@@ -1,7 +1,7 @@
-package com.taotao.rest.service.impl;
+package com.taotao.service.impl;
 
-import com.taotao.rest.dao.TbItemDescMapper;
-import com.taotao.rest.service.TbItemDescService;
+import com.taotao.dao.TbItemDescMapper;
+import com.taotao.service.TbItemDescService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

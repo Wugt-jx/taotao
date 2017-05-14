@@ -1,4 +1,4 @@
-package com.taotao.rest.dao;
+package com.taotao.dao;
 
 
 public interface TbOrderShippingMapper {

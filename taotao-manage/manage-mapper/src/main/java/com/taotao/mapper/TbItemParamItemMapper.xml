@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.taotao.rest.dao.TbItemParamItemMapper" >
-  <resultMap id="BaseResultMap" type="com.taotao.rest.pojo.TbItemParamItem" >
+<mapper namespace="com.taotao.dao.TbItemParamItemMapper" >
+  <resultMap id="BaseResultMap" type="com.taotao.pojo.TbItemParamItem" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="item_id" property="itemId" jdbcType="BIGINT" />
     <result column="param_data" property="paramData" javaType="java.lang.String"/>
@@ -9,17 +9,17 @@
     <result column="updated" property="updated" jdbcType="TIMESTAMP" />
   </resultMap>
 
-  <insert id="insert" parameterType="com.taotao.rest.pojo.TbItemParamItem">
+  <insert id="insert" parameterType="com.taotao.pojo.TbItemParamItem">
     INSERT INTO tb_item_param_item(item_id,param_data,created,updated)
     VALUES (#{itemId},#{paramData},#{created},#{updated})
   </insert>
 
-  <update id="update" parameterType="com.taotao.rest.pojo.TbItemParamItem">
+  <update id="update" parameterType="com.taotao.pojo.TbItemParamItem">
     UPDATE tb_item_param_item SET param_data=#{paramData},updated=#{updated} WHERE id=#{id}
   </update>
 
 
-  <select id="selectByItemId" parameterType="com.taotao.rest.pojo.TbItemParamItem" resultMap="BaseResultMap">
+  <select id="selectByItemId" parameterType="com.taotao.pojo.TbItemParamItem" resultMap="BaseResultMap">
     SELECT id,item_id,param_data FROM  tb_item_param_item WHERE item_id=#{itemId}
   </select>
 

@@ -1,7 +1,7 @@
-package com.taotao.rest.dao;
+package com.taotao.dao;
 
 
-import com.taotao.rest.pojo.TbItemDesc;
+import com.taotao.pojo.TbItemDesc;
 
 public interface TbItemDescMapper {
 

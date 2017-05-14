@@ -1,11 +1,11 @@
-package com.taotao.rest.controller;
+package com.taotao.controller;
 
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.taotao.rest.pojo.TbItem;
-import com.taotao.rest.pojo.TbItemParamItem;
-import com.taotao.rest.service.TbItemService;
+import com.taotao.pojo.TbItem;
+import com.taotao.pojo.TbItemParamItem;
+import com.taotao.service.TbItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

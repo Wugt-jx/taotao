@@ -1,8 +1,8 @@
-package com.taotao.rest.service.impl;
+package com.taotao.service.impl;
 
-import com.taotao.rest.dao.TbItemParamItemMapper;
-import com.taotao.rest.pojo.TbItemParamItem;
-import com.taotao.rest.service.TbItemParamItemService;
+import com.taotao.dao.TbItemParamItemMapper;
+import com.taotao.pojo.TbItemParamItem;
+import com.taotao.service.TbItemParamItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pojo.TaoTaoResult;

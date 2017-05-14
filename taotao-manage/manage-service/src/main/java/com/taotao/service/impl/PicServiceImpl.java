@@ -1,6 +1,6 @@
-package com.taotao.rest.service.impl;
+package com.taotao.service.impl;
 
-import com.taotao.rest.service.PicService;
+import com.taotao.service.PicService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;

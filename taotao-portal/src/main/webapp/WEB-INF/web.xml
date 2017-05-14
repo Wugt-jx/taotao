@@ -5,9 +5,6 @@
          id="taotao" version="2.5">
   <display-name>taotao-manager</display-name>
 
-  <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
 
   <!--spring IOC容器-->
   <context-param>

@@ -1,4 +1,4 @@
-package com.taotao.rest.service;
+package com.taotao.service;
 
 /**
  * Created by Administrator on 2017/5/10.

@@ -53,6 +53,7 @@
         <option value="$PROJECT_DIR$/../taotao-common/pom.xml" />
         <option value="$PROJECT_DIR$/../taotao-rest/pom.xml" />
         <option value="$PROJECT_DIR$/../taotaoportal/pom.xml" />
+        <option value="$PROJECT_DIR$/../taotao-portal/pom.xml" />
       </list>
     </option>
   </component>
