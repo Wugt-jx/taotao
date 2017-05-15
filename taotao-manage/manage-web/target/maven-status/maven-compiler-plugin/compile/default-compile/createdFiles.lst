@@ -1,7 +1,8 @@
-com\taotao\controller\TbItenParamItemController.class
 com\taotao\controller\TbItemCatController.class
 com\taotao\controller\TbItemController.class
 com\taotao\controller\TbItemParamController.class
-com\taotao\controller\HelloController.class
 com\taotao\controller\TbItemDescController.class
 com\taotao\controller\PicController.class
+com\taotao\controller\TbItenParamItemController.class
+com\taotao\controller\HelloController.class
+com\taotao\controller\TbContentCategoryController.class
