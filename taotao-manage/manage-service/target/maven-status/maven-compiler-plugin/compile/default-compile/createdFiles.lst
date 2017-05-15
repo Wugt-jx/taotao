@@ -1,4 +1,5 @@
 com\taotao\service\impl\TbContentCategoryServiceImpl.class
+com\taotao\service\impl\TbContentServiceImpl.class
 com\taotao\service\impl\TbItemDescServiceImpl.class
 com\taotao\service\TbItemParamService.class
 com\taotao\service\TbItemDescService.class
@@ -10,5 +11,6 @@ com\taotao\service\TbItemCatService.class
 com\taotao\service\impl\TbItemParamServiceImpl.class
 com\taotao\service\PicService.class
 com\taotao\service\TbItemService.class
+com\taotao\service\TbContentService.class
 com\taotao\service\TbContentCategoryService.class
 com\taotao\service\impl\TbItemCatServiceImpl.class

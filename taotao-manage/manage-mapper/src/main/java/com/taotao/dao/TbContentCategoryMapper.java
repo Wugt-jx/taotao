@@ -15,4 +15,6 @@ public interface TbContentCategoryMapper {
     public void setParent(TbContentCategory contentCategory);
 
     public void delete(Long parentId);
+
+    public void update(TbContentCategory contentCategory);
 }

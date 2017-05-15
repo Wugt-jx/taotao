@@ -13,4 +13,5 @@ public interface TbContentCategoryService {
      List<EasyUITreeNodeResult> getContentCategoryList(Long parentId);
      TaoTaoResult save(Long parentId,String name);
      TaoTaoResult delete(Long parentId,Long id);
+     TaoTaoResult rename(Long id,String name);
 }

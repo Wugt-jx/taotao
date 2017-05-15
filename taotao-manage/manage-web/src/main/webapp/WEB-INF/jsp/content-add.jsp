@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<link href="/WEB-INF/js/kindeditor-4.1.10/themes/default/default.css" type="text/css" rel="stylesheet">
+<link href="/js/kindeditor-4.1.10/themes/default/default.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" charset="utf-8" src="/js/kindeditor-4.1.10/kindeditor-all-min.js"></script>
 <script type="text/javascript" charset="utf-8" src="/js/kindeditor-4.1.10/lang/zh_CN.js"></script>
 <div style="padding:10px 10px 10px 10px">
@@ -66,8 +66,8 @@
 				}
 				contentAddEditor.sync();
 				
-				$.post("/content/save",$("#contentAddForm").serialize(), function(data){
-					if(data.status == 200){
+				$.post("/content/save.action",$("#contentAddForm").serialize(), function(data){
+					if(backdata.status == 200){
 						$.messager.alert('提示','新增内容成功!');
     					$("#contentList").datagrid("reload");
     					TT.closeCurrentWindow();

@@ -29,17 +29,17 @@ $(function(){
         		// 新增节点
         		$.post("/content/category/create.action",{parentId:node.parentId,name:node.text},function(data){
         			if(data.status == 200){
-                        $.messager.alert('提示','创建'+node.text+' 分类成功!');
+                        $.messager.alert('提示','创建 '+node.text+' 分类成功!');
         				_tree.tree("update",{
             				target : node.target,
             				id : data.data.id
             			});
         			}else{
-        				$.messager.alert('提示','创建'+node.text+' 分类失败!');
+        				$.messager.alert('提示','创建 '+node.text+' 分类失败!');
         			}
         		});
         	}else{
-        		$.post("/content/category/update",{id:node.id,name:node.text});
+        		$.post("/content/category/rename.action",{id:node.id,name:node.text});
         	}
         }
 	});

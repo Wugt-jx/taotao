@@ -1,7 +1,6 @@
 package com.taotao.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.taotao.pojo.TbContentCategory;
 import com.taotao.service.TbContentCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -43,6 +42,13 @@ public class TbContentCategoryController {
     @RequestMapping(value = "/delete",method = RequestMethod.POST,produces = "application/json;charset=UTF-8")
     public String deleteContentCategory(Long parentId,Long id){
         TaoTaoResult taoTaoResult = contentCategoryService.delete(parentId,id);
+        return JSON.toJSONString(taoTaoResult);
+    }
+
+    @ResponseBody
+    @RequestMapping(value="/rename",method = RequestMethod.POST,produces = "application/json;charset=UTF-8")
+    public String rename(Long id,String name){
+        TaoTaoResult taoTaoResult = contentCategoryService.rename(id,name);
         return JSON.toJSONString(taoTaoResult);
     }
 }

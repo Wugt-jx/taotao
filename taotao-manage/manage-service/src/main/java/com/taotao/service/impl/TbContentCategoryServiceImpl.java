@@ -77,13 +77,22 @@ public class TbContentCategoryServiceImpl implements TbContentCategoryService {
         if (contentCategories.size()<=0){
             TbContentCategory parentCategory = contentCategoryMapper.selectById(parentId);
             parentCategory.setIsParent(false);
+            parentCategory.setUpdated(date);
             contentCategoryMapper.setParent(parentCategory);
         }
         return TaoTaoResult.ok();
     }
 
-
-
+    @Override
+    @Transactional
+    public TaoTaoResult rename(Long id,String name) {
+        if (id==null||name==null||"".equals(name.trim())){throw new NullPointerException("lack of parameter !");}
+        contentCategory.setId(id);
+        contentCategory.setName(name);
+        contentCategory.setUpdated(new Date());
+        contentCategoryMapper.update(contentCategory);
+        return TaoTaoResult.ok();
+    }
 
 
 }

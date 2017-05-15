@@ -6,3 +6,4 @@ com\taotao\controller\PicController.class
 com\taotao\controller\TbItenParamItemController.class
 com\taotao\controller\HelloController.class
 com\taotao\controller\TbContentCategoryController.class
+com\taotao\controller\TbContentController.class
