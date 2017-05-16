@@ -5,6 +5,8 @@ package com.taotao.rest.util;
  */
 public class MappingJsonUtil  {
     public static String setJsonpFunciton(String result,String callback){
-        return callback + "(" + result + ");";
+        StringBuilder sb_result = new StringBuilder(callback);
+        sb_result.append("(").append(result).append(");");
+        return sb_result.toString();
     }
 }

@@ -1,6 +1,9 @@
 pojo\PicResult.class
 util\FtpUtil.class
-pojo\EasyUIDataGridResult.class
 pojo\TaoTaoResult.class
+util\HttpUtil.class
 util\IDUtils.class
+constant\HttpConstant.class
+exception\TaoException.class
+pojo\EasyUIDataGridResult.class
 pojo\EasyUITreeNodeResult.class

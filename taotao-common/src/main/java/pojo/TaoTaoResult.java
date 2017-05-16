@@ -40,6 +40,10 @@ public class TaoTaoResult<T> {
         return new TaoTaoResult(status,msg,object);
     }
 
+    public static TaoTaoResult build(Integer status,String msg){
+        return new TaoTaoResult(status,msg);
+    }
+
     public Integer getStatus() {
         return status;
     }
