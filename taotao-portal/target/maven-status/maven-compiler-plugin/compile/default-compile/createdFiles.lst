@@ -1,6 +1,5 @@
 com\taotao\portal\service\ContentService.class
 com\taotao\portal\service\impl\ContentServiceImpl$1.class
-com\taotao\portal\controller\ContentController.class
 com\taotao\Default.class
 com\taotao\portal\controller\PageController.class
 com\taotao\portal\service\impl\ContentServiceImpl.class

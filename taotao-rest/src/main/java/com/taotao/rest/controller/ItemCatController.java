@@ -23,8 +23,9 @@ public class ItemCatController {
     @ResponseBody
     @RequestMapping(value = "/list",produces = "application/json;charset=UTF-8")
     public String getItemCatList(String callback){
-        CatResult catResult = itemCatService.getItemCatList();
-        String result = MappingJsonUtil.setJsonpFunciton(JSON.toJSONString(catResult),callback);
+        String catResult = itemCatService.getItemCatList();
+        String result = MappingJsonUtil.setJsonpFunciton(catResult,callback);
+        System.gc();
         return result;
     }
 

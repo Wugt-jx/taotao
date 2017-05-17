@@ -1,11 +1,16 @@
 package com.taotao.rest.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.taotao.dao.TbItemCatMapper;
 import com.taotao.pojo.TbItemCat;
+import com.taotao.rest.redis.JedisClient;
 import com.taotao.rest.service.ItemCatService;
 import com.taotao.rest.vo.CatResult;
 import com.taotao.rest.vo.CateNode;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -24,10 +29,32 @@ public class ItemCatServiceImpl implements ItemCatService {
     @Autowired
     private CatResult catResult;
 
+    @Autowired
+    private JedisClient jedisClient;
+
+    @Value("INDEX_CAT_REDIS_KEY")
+    private String INDEX_CAT_REDIS_KEY;
+
     @Override
-    public CatResult getItemCatList() {
+    public String getItemCatList() {
+        String result=null;
+        try{
+           result = jedisClient.get(INDEX_CAT_REDIS_KEY);
+           if (!StringUtils.isBlank(result)) {
+               return result;
+           }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         catResult.setData(getCatList(0L));
-        return catResult;
+        result = JSON.toJSONString(catResult);
+
+        try {
+            jedisClient.set(INDEX_CAT_REDIS_KEY,result);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return result;
     }
 
     /**

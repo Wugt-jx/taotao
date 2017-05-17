@@ -1,11 +1,8 @@
 package com.taotao.portal.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
-import com.taotao.pojo.TbContent;
 import com.taotao.portal.service.ContentService;
-import exception.TaoException;
 import org.apache.http.HttpException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -36,8 +33,8 @@ public class ContentServiceImpl implements ContentService {
             String httpResult = HttpUtil.doGet(REST_BASE_URL+REST_INDEX_AD_URL);
             TaoTaoResult taoTaoResult = JSON.parseObject(httpResult,new TypeReference<TaoTaoResult>(){});
             if (taoTaoResult.getStatus()==200) {
-                List<Map> resultList = new ArrayList<>();
                 List<Map<String,Object>> contents = (List<Map<String, Object>>) taoTaoResult.getData();
+                List<Map> resultList = new ArrayList<>();
                 for (Map map :contents) {
                     Map resultMap = new HashMap<>();
                     resultMap.put("src", map.get("pic"));

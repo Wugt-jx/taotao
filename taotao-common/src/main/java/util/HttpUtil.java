@@ -69,7 +69,7 @@ public class HttpUtil {
      * @param params    参数
      * @return
      */
-    public String doGet(String url,Map<String,Object>params) throws IOException, HttpException, URISyntaxException {
+    public static String doGet(String url,Map<String,Object>params) throws IOException, HttpException, URISyntaxException {
         if (url==null){throw new NullPointerException("url is null!");}
         logger.info("request url{}",url);
         if (params!=null&&params.size()>0){
@@ -105,12 +105,12 @@ public class HttpUtil {
      * @param params
      * @return
      */
-    public String doPost(String url, Map<String,Object>params) throws HttpException, IOException {
+    public static String doPost(String url, Map<String,Object>params) throws HttpException, IOException {
         if (url==null){throw new NullPointerException("url is null!");}
 
         CloseableHttpClient client =httpClientBuilder.build();
         HttpPost post = new HttpPost(url);
-        logger.info("request url{}",url);
+        logger.info("request url{}:",url);
         if (params!=null&&params.size()>0) {
             List<NameValuePair> kvList = new ArrayList<>();
             for (String key : params.keySet()) {kvList.add(new BasicNameValuePair(key, params.get(key).toString()));}

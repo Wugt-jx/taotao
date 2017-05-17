@@ -9,6 +9,7 @@ import java.util.List;
  */
 @Component
 public class CatResult {
+
     private List<?> data;
 
     public List<?> getData() {

@@ -1,3 +1,4 @@
+constant\RedisSynConstant.class
 pojo\PicResult.class
 util\FtpUtil.class
 pojo\TaoTaoResult.class

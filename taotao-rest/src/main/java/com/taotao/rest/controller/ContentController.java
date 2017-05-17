@@ -23,8 +23,10 @@ public class ContentController {
     @ResponseBody
     @RequestMapping(value = "/list/{contentId}",produces = "application/json;charset=UTF-8")
     public String getContentList(@PathVariable Long contentId){
-        TaoTaoResult taoTaoResult = contentService.getContentList(contentId);
-        return JSON.toJSONString(taoTaoResult);
+
+        String result = contentService.getContentList(contentId);
+
+        return result;
     }
 
 

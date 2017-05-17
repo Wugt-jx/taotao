@@ -1,4 +1,5 @@
 com\taotao\service\impl\TbContentCategoryServiceImpl.class
+com\taotao\service\util\SynCacheUtil.class
 com\taotao\service\impl\TbContentServiceImpl.class
 com\taotao\service\impl\TbItemDescServiceImpl.class
 com\taotao\service\TbItemParamService.class

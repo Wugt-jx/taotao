@@ -33,4 +33,5 @@
         <property name="basePackage" value="com.taotao.dao"></property>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
     </bean>
+
 </beans>
