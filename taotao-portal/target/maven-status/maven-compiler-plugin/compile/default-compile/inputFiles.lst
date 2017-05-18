@@ -1,4 +1,9 @@
 F:\workspace\taotao\taotao-portal\src\main\java\com\taotao\Default.java
 F:\workspace\taotao\taotao-portal\src\main\java\com\taotao\portal\service\impl\ContentServiceImpl.java
 F:\workspace\taotao\taotao-portal\src\main\java\com\taotao\portal\service\ContentService.java
+F:\workspace\taotao\taotao-portal\src\main\java\com\taotao\portal\service\ItemSearchService.java
 F:\workspace\taotao\taotao-portal\src\main\java\com\taotao\portal\controller\PageController.java
+F:\workspace\taotao\taotao-portal\src\main\java\com\taotao\portal\pojo\SearchResult.java
+F:\workspace\taotao\taotao-portal\src\main\java\com\taotao\portal\pojo\Item.java
+F:\workspace\taotao\taotao-portal\src\main\java\com\taotao\portal\controller\SearchController.java
+F:\workspace\taotao\taotao-portal\src\main\java\com\taotao\portal\service\impl\ItemSearchServiceImpl.java
