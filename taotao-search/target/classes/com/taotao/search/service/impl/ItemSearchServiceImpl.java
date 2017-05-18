@@ -1,20 +1,19 @@
 package com.taotao.search.service.impl;
 
-import com.taotao.search.dao.SearchDao;
+import com.taotao.search.solr.dao.SearchDao;
 import com.taotao.search.pojo.SearchResult;
 import com.taotao.search.service.ItemSearchService;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * Created by Administrator on 2017/5/18.
  */
 @Service
 public class ItemSearchServiceImpl implements ItemSearchService {
-
 
 
     @Autowired

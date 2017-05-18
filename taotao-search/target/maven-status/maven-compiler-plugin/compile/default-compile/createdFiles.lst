@@ -1,12 +1,12 @@
 com\taotao\search\controller\ItemController.class
 com\taotao\search\pojo\Item.class
+com\taotao\search\solr\dao\impl\SearchDaoImpl.class
 com\taotao\search\service\impl\ItemSearchServiceImpl.class
-com\taotao\search\dao\impl\SearchDaoImpl.class
 com\taotao\search\dao\ItemMapper.class
 com\taotao\Default.class
-com\taotao\search\dao\SearchDao.class
 com\taotao\search\pojo\SearchResult.class
 com\taotao\search\controller\SearchController.class
 com\taotao\search\service\ItemSearchService.class
 com\taotao\search\service\impl\ItemServiceImpl.class
 com\taotao\search\service\ItemService.class
+com\taotao\search\solr\dao\SearchDao.class

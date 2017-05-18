@@ -6,8 +6,8 @@ import java.util.List;
  * Created by Administrator on 2017/5/18.
  */
 public class SearchResult {
-    private Long recordCount;
     private List<Item> itemList;
+    private Long recordCount;
     private Long pageCount;
     private Long curPage;
 

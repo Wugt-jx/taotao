@@ -1,1 +1,1 @@
-127.0.0.1 - - [18/May/2017:19:25:15 +0800] "GET /search/query?q=apple&page=1 HTTP/1.1" 200 4162 http-bio-8083-exec-1 122
+0:0:0:0:0:0:0:1 - - [18/May/2017:23:57:32 +0800] "GET /search/item/importall HTTP/1.1" 200 4176 http-bio-8083-exec-1 195

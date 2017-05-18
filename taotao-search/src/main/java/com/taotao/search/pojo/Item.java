@@ -5,21 +5,23 @@ package com.taotao.search.pojo;
  * 检索document实体
  */
 public class Item {
-    private Long id;
+    private String id;
     private String title;
     private String sell_point;
-    private Long price;
+    private long price;
     private String image;
     private String category_name;
+    private String item_des;
+
 
     public Item() {
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -39,11 +41,11 @@ public class Item {
         this.sell_point = sell_point;
     }
 
-    public Long getPrice() {
+    public long getPrice() {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(long price) {
         this.price = price;
     }
 
@@ -61,5 +63,13 @@ public class Item {
 
     public void setCategory_name(String category_name) {
         this.category_name = category_name;
+    }
+
+    public String getItem_des() {
+        return item_des;
+    }
+
+    public void setItem_des(String item_des) {
+        this.item_des = item_des;
     }
 }
