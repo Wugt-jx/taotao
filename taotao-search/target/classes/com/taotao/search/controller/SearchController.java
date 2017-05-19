@@ -1,10 +1,12 @@
 package com.taotao.search.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.sun.tools.internal.ws.wsdl.document.http.HTTPConstants;
 import com.taotao.search.pojo.Item;
 import com.taotao.search.pojo.SearchResult;
 import com.taotao.search.service.ItemSearchService;
 import com.taotao.search.service.ItemService;
+import constant.HttpConstant;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +26,7 @@ public class SearchController {
     @Autowired
     private ItemSearchService searchService;
 
-    @RequestMapping(value="/query", method= RequestMethod.GET)
+    @RequestMapping(value="/query", method= RequestMethod.GET,produces = "application/json;charset=UTF-8")
     @ResponseBody
     public String search(@RequestParam("q")String queryString,
                                @RequestParam(defaultValue="1")Integer page,
@@ -35,15 +37,14 @@ public class SearchController {
         }
         SearchResult searchResult = null;
         try {
-            queryString = new String(queryString.getBytes("iso8859-1"),"utf-8");
-
             searchResult = searchService.search(queryString, page, rows);
         } catch (Exception e) {
             e.printStackTrace();
             return JSON.toJSONString(TaoTaoResult.build(500, ExceptionUtils.getStackTrace(e)));
         }
-
-        return JSON.toJSONString(TaoTaoResult.ok(searchResult));
-
+        System.out.println("/////////////////////////////////////////////////////////");
+        String result = JSON.toJSONString(TaoTaoResult.ok(searchResult));
+        System.out.println(result);
+        return result;
     }
 }

@@ -5,3 +5,7 @@
 0:0:0:0:0:0:0:1 - - [19/May/2017:00:27:14 +0800] "GET /search/item/importall HTTP/1.1" 200 30 http-bio-8083-exec-1 40767
 0:0:0:0:0:0:0:1 - - [19/May/2017:00:39:12 +0800] "GET /search/item/importall HTTP/1.1" 200 30 http-bio-8083-exec-1 40485
 127.0.0.1 - - [19/May/2017:00:39:42 +0800] "GET /search/query?q=apple&page=1 HTTP/1.1" 200 16086 http-bio-8083-exec-3 169
+127.0.0.1 - - [19/May/2017:23:23:55 +0800] "GET /search/query?q=apple&page=1 HTTP/1.1" 200 16086 http-bio-8083-exec-1 428
+127.0.0.1 - - [19/May/2017:23:29:41 +0800] "GET /search/query?q=apple&page=1 HTTP/1.1" 200 16086 http-bio-8083-exec-3 84
+127.0.0.1 - - [19/May/2017:23:38:57 +0800] "GET /search/query?q=apple&page=1 HTTP/1.1" 200 16086 http-bio-8083-exec-1 446
+127.0.0.1 - - [19/May/2017:23:49:19 +0800] "GET /search/query?q=apple&page=1 HTTP/1.1" 200 16086 http-bio-8083-exec-1 474

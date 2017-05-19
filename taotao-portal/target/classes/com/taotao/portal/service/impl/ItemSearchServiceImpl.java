@@ -25,6 +25,7 @@ public class ItemSearchServiceImpl implements ItemSearchService {
 
     @Override
     public SearchResult search(String queryString, int page) {
+
         // 调用taotao-search的服务
         //查询参数
         Map<String, Object> param = new HashMap<>();
@@ -33,6 +34,7 @@ public class ItemSearchServiceImpl implements ItemSearchService {
         try {
             //调用服务
             String json = HttpUtil.doGet(SEARCH_BASE_URL, param);
+            System.out.println(json);
             //把字符串转换成java对象
             TaoTaoResult taotaoResult = JSON.parseObject(json,new TypeReference<TaoTaoResult<SearchResult>>(){});
             if (taotaoResult.getStatus() == 200) {
