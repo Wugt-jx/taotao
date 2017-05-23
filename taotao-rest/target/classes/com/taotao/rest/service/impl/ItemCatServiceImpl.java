@@ -58,7 +58,7 @@ public class ItemCatServiceImpl implements ItemCatService {
     }
 
     /**
-     * 递归获取全部数据
+     * 递归获取指定parentid下所有子分类
      * @param parentId
      * @return
      */

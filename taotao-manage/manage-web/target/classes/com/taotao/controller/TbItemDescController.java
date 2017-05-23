@@ -12,6 +12,10 @@ import pojo.TaoTaoResult;
 /**
  * Created by Administrator on 2017/5/10.
  */
+
+/**
+ * 商品详情描述
+ */
 @Controller
 @RequestMapping("/itemDesc")
 public class TbItemDescController {

@@ -42,9 +42,7 @@ public class SearchController {
             e.printStackTrace();
             return JSON.toJSONString(TaoTaoResult.build(500, ExceptionUtils.getStackTrace(e)));
         }
-        System.out.println("/////////////////////////////////////////////////////////");
         String result = JSON.toJSONString(TaoTaoResult.ok(searchResult));
-        System.out.println(result);
         return result;
     }
 }

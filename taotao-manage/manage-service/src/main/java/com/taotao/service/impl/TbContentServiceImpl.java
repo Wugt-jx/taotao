@@ -67,9 +67,7 @@ public class TbContentServiceImpl implements TbContentService {
         content.setUpdated(date);
         contentMapper.update(content);
         try {
-            TaoTaoResult synResult = SynCacheUtil.synCache(RedisSynConstant.INDEX_CONTENT_REDIS_KEY,content.getCategoryId()+"");
-            if (synResult.getStatus()==RedisSynConstant.FAIL_CODE){logger.info("redis synchronization fail of cache");}
-            logger.info("redis synchronization successfully of cache");
+            SynCacheUtil.synCache(RedisSynConstant.INDEX_CONTENT_REDIS_KEY,content.getCategoryId()+"");
         } catch (IOException e) {
             e.printStackTrace();
         } catch (HttpException e) {
@@ -86,9 +84,7 @@ public class TbContentServiceImpl implements TbContentService {
         for (Long id:ids){
             contentMapper.delete(id);
             try {
-                TaoTaoResult synResult = SynCacheUtil.synCache(RedisSynConstant.INDEX_CONTENT_REDIS_KEY,id+"");
-                if (synResult.getStatus()==RedisSynConstant.FAIL_CODE){logger.info("redis synchronization fail of cache");}
-                logger.info("redis synchronization successfully of cache");
+                SynCacheUtil.synCache(RedisSynConstant.INDEX_CONTENT_REDIS_KEY,id+"");
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (HttpException e) {

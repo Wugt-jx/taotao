@@ -1,0 +1,10 @@
+127.0.0.1 - - [22/May/2017:16:26:53 +0800] "GET /search/query?q=apple&page=1 HTTP/1.1" 200 18902 http-bio-8083-exec-1 968
+127.0.0.1 - - [22/May/2017:17:00:03 +0800] "GET /search/query?q=apple&page=1 HTTP/1.1" 200 18902 http-bio-8083-exec-3 1356
+127.0.0.1 - - [22/May/2017:17:13:03 +0800] "GET /search/query?q=apple&page=1 HTTP/1.1" 200 18902 http-bio-8083-exec-1 4160
+127.0.0.1 - - [22/May/2017:20:00:00 +0800] "GET /search/syn/solrIndex HTTP/1.1" 404 949 http-bio-8083-exec-1 78
+0:0:0:0:0:0:0:1 - - [22/May/2017:20:14:02 +0800] "POST /search/syn/solrIndex?itemId=149545439970677 HTTP/1.1" 404 949 http-bio-8083-exec-1 80
+0:0:0:0:0:0:0:1 - - [22/May/2017:20:15:58 +0800] "POST /search/syn/solrIndex?itemId=149545439970677 HTTP/1.1" 200 30 http-bio-8083-exec-1 745
+127.0.0.1 - - [22/May/2017:20:17:50 +0800] "GET /search/query?q=%E5%8D%8E%E4%B8%BAnova&page=1 HTTP/1.1" 200 599 http-bio-8083-exec-3 72
+127.0.0.1 - - [22/May/2017:21:49:56 +0800] "GET /search/query?q=%E5%8D%8E%E4%B8%BAnova&page=1 HTTP/1.1" 200 599 http-bio-8083-exec-1 532
+127.0.0.1 - - [22/May/2017:21:54:58 +0800] "GET /search/query?q=%E5%8D%8E%E4%B8%BAnova&page=1 HTTP/1.1" 200 599 http-bio-8083-exec-3 45
+127.0.0.1 - - [22/May/2017:22:05:58 +0800] "GET /search/query?q=%E5%8D%8E%E4%B8%BAnova&page=1 HTTP/1.1" 200 599 http-bio-8083-exec-5 61

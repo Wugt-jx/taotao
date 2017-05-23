@@ -9,6 +9,8 @@ import com.taotao.pojo.TbItem;
 import com.taotao.pojo.TbItemDesc;
 import com.taotao.pojo.TbItemParamItem;
 import com.taotao.service.TbItemService;
+import com.taotao.service.util.SynSearchIndexUtil;
+import org.apache.http.HttpException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,6 +18,8 @@ import pojo.EasyUIDataGridResult;
 import pojo.TaoTaoResult;
 import util.IDUtils;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.Date;
 import java.util.List;
 
@@ -87,6 +91,15 @@ public class TbItemServiceImpl implements TbItemService {
             itemParamItemMapper.insert(itemParamItem);
         }
 
+        try {
+            SynSearchIndexUtil.synSearchIndex(item.getId());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (HttpException e) {
+            e.printStackTrace();
+        }
         return TaoTaoResult.ok();
     }
 

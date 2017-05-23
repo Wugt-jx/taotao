@@ -8,4 +8,6 @@ import pojo.TaoTaoResult;
 public interface ItemService {
 
     public TaoTaoResult importItemToIndex()throws Exception;
+
+    public TaoTaoResult importOneItemIndex(Long itemId);
 }

@@ -13,11 +13,20 @@ import java.io.UnsupportedEncodingException;
 /**
  * Created by Administrator on 2017/5/18.
  */
+
+/**
+ * 门户搜索
+ */
 @Controller
 public class SearchController {
     @Autowired
     private ItemSearchService searchService;
 
+    /**
+     *  根据关键字查询商品
+     * @param queryString 查询关键字
+     * @return
+     */
     @RequestMapping("/search")
     public String search(@RequestParam("q")String queryString, @RequestParam(defaultValue="1")Integer page, Model model) {
         if (queryString != null) {

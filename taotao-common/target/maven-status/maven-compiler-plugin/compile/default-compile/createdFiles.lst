@@ -6,5 +6,6 @@ util\HttpUtil.class
 util\IDUtils.class
 constant\HttpConstant.class
 exception\TaoException.class
+constant\SolrSybConstant.class
 pojo\EasyUIDataGridResult.class
 pojo\EasyUITreeNodeResult.class

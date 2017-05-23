@@ -1,9 +1,13 @@
 F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\Default.java
 F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\pojo\SearchResult.java
-F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\service\ContentService.java
 F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\service\impl\ContentServiceImpl.java
-F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\controller\PageController.java
-F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\service\ItemSearchService.java
+F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\pojo\ItemInfo.java
 F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\controller\SearchController.java
 F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\service\impl\ItemSearchServiceImpl.java
 F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\pojo\Item.java
+F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\controller\IndexController.java
+F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\service\ContentService.java
+F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\service\impl\ItemInfoServiceImpl.java
+F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\service\ItemSearchService.java
+F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\controller\ItemInfoController.java
+F:\project_clone\taotao\taotao-portal\src\main\java\com\taotao\portal\service\ItemInfoService.java

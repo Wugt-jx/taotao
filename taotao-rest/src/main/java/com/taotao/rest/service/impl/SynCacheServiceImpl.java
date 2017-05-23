@@ -9,6 +9,10 @@ import pojo.TaoTaoResult;
 /**
  * Created by Administrator on 2017/5/17.
  */
+
+/**
+ * 同步缓存
+ */
 @Service
 public class SynCacheServiceImpl implements SynCacheService {
 

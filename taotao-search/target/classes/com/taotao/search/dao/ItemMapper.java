@@ -12,4 +12,5 @@ import java.util.List;
 public interface ItemMapper {
 
        public List<Item> getItemList();
+       public Item getById(Long id);
 }

@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.*;
 import pojo.EasyUIDataGridResult;
 import pojo.TaoTaoResult;
 
-
+/**
+ * 商品规格参数模板
+ */
 @Controller
 @RequestMapping("/item/param")
 public class TbItemParamController {

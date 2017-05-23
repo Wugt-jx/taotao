@@ -22,7 +22,12 @@ public class ItemSearchServiceImpl implements ItemSearchService {
     @Value("${SEARCH_BASE_URL}")
     private String SEARCH_BASE_URL;
 
-
+    /**
+     * 获取商品列表
+     * @param queryString
+     * @param page
+     * @return
+     */
     @Override
     public SearchResult search(String queryString, int page) {
 
@@ -34,7 +39,6 @@ public class ItemSearchServiceImpl implements ItemSearchService {
         try {
             //调用服务
             String json = HttpUtil.doGet(SEARCH_BASE_URL, param);
-            System.out.println(json);
             //把字符串转换成java对象
             TaoTaoResult taotaoResult = JSON.parseObject(json,new TypeReference<TaoTaoResult<SearchResult>>(){});
             if (taotaoResult.getStatus() == 200) {
@@ -46,6 +50,5 @@ public class ItemSearchServiceImpl implements ItemSearchService {
             e.printStackTrace();
         }
         return null;
-
     }
 }

@@ -14,6 +14,10 @@ import pojo.TaoTaoResult;
 /**
  * Created by wgt on 2017/5/15.
  */
+
+/**
+ * 后台管理员对广告内容的操作
+ */
 @Controller
 @RequestMapping(value = "/content")
 public class TbContentController {
@@ -21,7 +25,13 @@ public class TbContentController {
     @Autowired
     private TbContentService contentService;
 
-
+    /**
+     * 获取指定广告类型下所有的广告内容记录
+     * @param page 从第几页开始获取，默认为第一页
+     * @param rows 每页获取的广告条数，默认为30
+     * @param categoryId
+     * @return
+     */
     @ResponseBody
     @RequestMapping(value = "/query/list",produces = "application/json;charset=UTF-8")
     public String selectLimit(@RequestParam(defaultValue = "1") Integer page,
@@ -32,7 +42,11 @@ public class TbContentController {
         return result;
     }
 
-
+    /**
+     * 创建广告
+     * @param content
+     * @return
+     */
     @ResponseBody
     @RequestMapping(value = "/save",produces = "application/json;charset=UTF-8")
     public String save(TbContent content){
@@ -41,6 +55,11 @@ public class TbContentController {
         return result;
     }
 
+    /**
+     * 更新广告
+     * @param content
+     * @return
+     */
     @ResponseBody
     @RequestMapping(value = "/edit",produces = "application/json;charset=UTF-8")
     public String update(TbContent content){
@@ -49,7 +68,11 @@ public class TbContentController {
         return result;
     }
 
-
+    /**
+     * 删除广告，批量删除
+     * @param ids
+     * @return
+     */
     @ResponseBody
     @RequestMapping(value = "/delete",produces = "application/json;charset=UTF-8")
     public String delete(Long[] ids){

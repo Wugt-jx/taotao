@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 /**
  * 图片上传控制器
+ * 将图片上传到图片服务器（具体实现看service实现类）
  */
 @RequestMapping("/pic")
 @Controller

@@ -26,7 +26,10 @@ public class ContentServiceImpl implements ContentService {
     @Value("${REST_INDEX_AD_URL}")
     private String REST_INDEX_AD_URL;
 
-
+    /**
+     * 请求taotao-rest服务，查询广告内容
+     * @return
+     */
     @Override
     public String getContentList() {
         try {

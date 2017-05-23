@@ -5,6 +5,7 @@ com\taotao\search\service\impl\ItemSearchServiceImpl.class
 com\taotao\search\dao\ItemMapper.class
 com\taotao\Default.class
 com\taotao\search\pojo\SearchResult.class
+com\taotao\search\controller\SynSearchIndexController.class
 com\taotao\search\controller\SearchController.class
 com\taotao\search\service\ItemSearchService.class
 com\taotao\search\service\impl\ItemServiceImpl.class

@@ -1,12 +1,13 @@
-F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\controller\ItemController.java
+F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\controller\SynSearchIndexController.java
 F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\dao\ItemMapper.java
 F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\pojo\SearchResult.java
 F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\service\ItemService.java
 F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\pojo\Item.java
-F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\service\impl\ItemSearchServiceImpl.java
-F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\service\impl\ItemServiceImpl.java
 F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\solr\dao\impl\SearchDaoImpl.java
 F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\Default.java
 F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\controller\SearchController.java
+F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\controller\ItemController.java
+F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\service\impl\ItemSearchServiceImpl.java
+F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\service\impl\ItemServiceImpl.java
 F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\service\ItemSearchService.java
 F:\project_clone\taotao\taotao-search\src\main\java\com\taotao\search\solr\dao\SearchDao.java

@@ -45,6 +45,7 @@
     <file type="web" url="file://$PROJECT_DIR$/../taotao-portal" />
     <file type="web" url="file://$PROJECT_DIR$/../taotao-rest" />
     <file type="web" url="file://$PROJECT_DIR$/../taotao-search" />
+    <type id="Spring" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -56,6 +57,7 @@
         <option value="$PROJECT_DIR$/../taotao-rest/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../taotao-portal/pom.xml" />
+        <option value="$PROJECT_DIR$/../taotao-sso/pom.xml" />
       </list>
     </option>
   </component>

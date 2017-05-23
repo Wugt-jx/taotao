@@ -28,27 +28,35 @@ public class ContentServiceImpl implements ContentService{
     @Autowired
     private JedisClient jedisClient;
 
+    //查询缓存的键
     @Value("INDEX_CONTENT_REDIS_KEY")
     private String INDEX_CONTENT_REDIS_KEY;
 
+
+    /**
+     * 获取广告内容
+     * 想查询缓存中是否有，如果没有则查数据库，并添加到缓存中
+     * @param categoryId 广告分类id
+     * @return
+     */
     @Override
     @Transactional
-    public String getContentList(Long contentCid) {
-        if (contentCid==null){return JSON.toJSONString(TaoTaoResult.build(4000,"lack of parameter!"));}
+    public String getContentList(Long categoryId) {
+        if (categoryId==null){return JSON.toJSONString(TaoTaoResult.build(4000,"lack of parameter!"));}
         String result = null;
         try {
-            result =jedisClient.hget(INDEX_CONTENT_REDIS_KEY,contentCid+"");
+            result =jedisClient.hget(INDEX_CONTENT_REDIS_KEY,categoryId+"");
             if (!StringUtils.isBlank(result)){
                 return result;
             }
         }catch (Exception e){
             e.printStackTrace();
         }
-        List<TbContent> contents = contentMapper.selectLimit(contentCid);
+        List<TbContent> contents = contentMapper.selectLimit(categoryId);
         result =JSON.toJSONString(TaoTaoResult.ok(contents));
 
         try {
-            jedisClient.hset(INDEX_CONTENT_REDIS_KEY,contentCid+"",result);
+            jedisClient.hset(INDEX_CONTENT_REDIS_KEY,categoryId+"",result);
         }catch (Exception e){
             e.printStackTrace();
         }

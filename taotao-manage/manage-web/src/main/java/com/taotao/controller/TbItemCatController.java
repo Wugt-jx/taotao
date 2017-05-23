@@ -13,6 +13,9 @@ import pojo.EasyUITreeNodeResult;
 import java.util.List;
 
 
+/**
+ * 商品分类
+ */
 @Controller
 @RequestMapping("/item/cat")
 public class TbItemCatController {

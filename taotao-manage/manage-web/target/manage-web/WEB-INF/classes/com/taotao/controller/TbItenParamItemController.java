@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pojo.TaoTaoResult;
 
-
+/**
+ * 商品规格参数查询
+ */
 @Controller
 @RequestMapping("/item/param/item")
 public class TbItenParamItemController {

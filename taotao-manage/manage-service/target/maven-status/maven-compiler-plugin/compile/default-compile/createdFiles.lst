@@ -8,6 +8,7 @@ com\taotao\service\impl\PicServiceImpl.class
 com\taotao\service\impl\TbItemParamItemServiceImpl.class
 com\taotao\service\TbItemParamItemService.class
 com\taotao\service\impl\TbItemServiceImpl.class
+com\taotao\service\util\SynSearchIndexUtil.class
 com\taotao\service\TbItemCatService.class
 com\taotao\service\impl\TbItemParamServiceImpl.class
 com\taotao\service\PicService.class
