@@ -11,6 +11,7 @@
         <module name="manage-service" />
         <module name="manage-web" />
         <module name="taotao-common" />
+        <module name="taotao-order" />
         <module name="taotao-portal" />
         <module name="taotao-rest" />
         <module name="taotao-search" />
@@ -25,11 +26,13 @@
       <module name="manage-web" target="1.7" />
       <module name="taotao-common" target="1.7" />
       <module name="taotao-manage" target="1.7" />
+      <module name="taotao-order" target="1.7" />
       <module name="taotao-parent" target="1.7" />
       <module name="taotao-portal" target="1.7" />
       <module name="taotao-rest" target="1.7" />
       <module name="taotao-search" target="1.7" />
       <module name="taotao-sso" target="1.7" />
+      <module name="taotaosso" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

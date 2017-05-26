@@ -1,7 +1,6 @@
 com\taotao\rest\service\SynCacheService.class
 com\taotao\rest\redis\RedisClientSignle.class
 com\taotao\Default.class
-com\taotao\rest\util\MappingJsonUtil.class
 com\taotao\rest\service\ContentService.class
 com\taotao\rest\vo\CatResult.class
 com\taotao\rest\service\impl\ItemDescServiceImpl.class

@@ -1,0 +1,8 @@
+com\taotao\order\redis\JedisClientCluster.class
+com\taotao\order\redis\JedisClient.class
+com\taotao\order\controller\OrderController.class
+com\taotao\Default.class
+com\taotao\order\service\impl\OrderServiceImpl.class
+com\taotao\order\vo\Order.class
+com\taotao\order\service\OrderService.class
+com\taotao\order\redis\RedisClientSignle.class

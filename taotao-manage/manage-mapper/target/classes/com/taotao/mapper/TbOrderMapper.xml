@@ -20,4 +20,24 @@
     <result column="buyer_nick" property="buyerNick" jdbcType="VARCHAR" />
     <result column="buyer_rate" property="buyerRate" jdbcType="INTEGER" />
   </resultMap>
+
+  <insert id="insert" parameterType="com.taotao.pojo.TbOrder">
+    INSERT INTO tb_order VALUES (#{orderId},
+                                #{payment},
+                                #{paymentType},
+                                #{postFee},
+                                #{status},
+                                #{createTime},
+                                #{updateTime},
+                                #{paymentTime},
+                                #{consignTime},
+                                #{endTime},
+                                #{closeTime},
+                                #{shippingName},
+                                #{shippingCode},
+                                #{userId},
+                                #{buyerMessage},
+                                #{buyerNick},
+                                #{buyerRate})
+  </insert>
 </mapper>

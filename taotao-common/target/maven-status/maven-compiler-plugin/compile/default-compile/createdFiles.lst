@@ -1,11 +1,13 @@
 constant\RedisSynConstant.class
 pojo\PicResult.class
-util\FtpUtil.class
 pojo\TaoTaoResult.class
-util\HttpUtil.class
 util\IDUtils.class
 constant\HttpConstant.class
-exception\TaoException.class
 constant\SolrSybConstant.class
 pojo\EasyUIDataGridResult.class
+util\CookieUtils.class
+util\FtpUtil.class
+util\HttpUtil.class
+exception\TaoException.class
+util\MappingJsonUtil.class
 pojo\EasyUITreeNodeResult.class

@@ -10,4 +10,26 @@
     <result column="created" property="created" jdbcType="TIMESTAMP" />
     <result column="updated" property="updated" jdbcType="TIMESTAMP" />
   </resultMap>
+
+  <select id="selectByUsername" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT id,username,password,phone,email
+    FROM tb_user
+    WHERE username=#{username}
+  </select>
+
+  <select id="selectByPhone" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT id,username,password,phone,email
+    FROM tb_user
+    WHERE phone=#{phone}
+  </select>
+
+  <select id="selectByEmail" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT id,username,password,phone,email
+    FROM tb_user
+    WHERE email=#{email}
+  </select>
+
+  <insert id="saveUser" parameterType="com.taotao.pojo.TbUser">
+    INSERT INTO tb_user VALUES (#{id},#{username},#{password},#{phone},#{email},#{created},#{updated})
+  </insert>
 </mapper>

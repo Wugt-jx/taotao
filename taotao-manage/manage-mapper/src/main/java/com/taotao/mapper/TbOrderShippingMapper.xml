@@ -14,4 +14,10 @@
     <result column="created" property="created" jdbcType="TIMESTAMP" />
     <result column="updated" property="updated" jdbcType="TIMESTAMP" />
   </resultMap>
+
+  <insert id="insert" parameterType="com.taotao.pojo.TbOrderShipping">
+    INSERT INTO  tb_order_shipping VALUES (#{orderId},#{receiverName},#{receiverPhone},#{receiverMobile},
+                                    #{receiverState},#{receiverCity},#{receiverDistrict},#{receiverAddress},
+                                    #{receiverZip},#{created},#{updated})
+  </insert>
 </mapper>

@@ -11,4 +11,8 @@
     <result column="total_fee" property="totalFee" jdbcType="BIGINT" />
     <result column="pic_path" property="picPath" jdbcType="VARCHAR" />
   </resultMap>
+
+  <insert id="insert" parameterType="com.taotao.pojo.TbOrderItem">
+    INSERT INTO tb_order_item VALUES (#{id},#{itemId},#{orderId},#{num},#{title},#{price},#{totalFee},#{picPath})
+  </insert>
 </mapper>

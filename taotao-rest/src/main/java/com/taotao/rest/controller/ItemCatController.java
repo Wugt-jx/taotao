@@ -1,9 +1,7 @@
 package com.taotao.rest.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.taotao.rest.service.ItemCatService;
-import com.taotao.rest.util.MappingJsonUtil;
-import com.taotao.rest.vo.CatResult;
+import util.MappingJsonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

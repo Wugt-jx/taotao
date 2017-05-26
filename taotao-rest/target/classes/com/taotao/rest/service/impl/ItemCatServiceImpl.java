@@ -32,7 +32,7 @@ public class ItemCatServiceImpl implements ItemCatService {
     @Autowired
     private JedisClient jedisClient;
 
-    @Value("INDEX_CAT_REDIS_KEY")
+    @Value("${INDEX_CAT_REDIS_KEY}")
     private String INDEX_CAT_REDIS_KEY;
 
     @Override

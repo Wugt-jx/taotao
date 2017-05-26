@@ -1,0 +1,10 @@
+com\taotao\sso\service\UserService.class
+com\taotao\sso\util\CheckConstant.class
+com\taotao\sso\redis\RedisClientSignle.class
+com\taotao\sso\redis\JedisClient.class
+com\taotao\sso\util\ResponseConstant.class
+com\taotao\sso\controller\UserController.class
+com\taotao\sso\service\impl\UserServiceImpl.class
+com\taotao\Deafult.class
+com\taotao\sso\redis\JedisClientCluster.class
+com\taotao\sso\controller\IndexController.class

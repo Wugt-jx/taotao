@@ -34,7 +34,7 @@ public class ContentServiceImpl implements ContentService {
     public String getContentList() {
         try {
             String httpResult = HttpUtil.doGet(REST_BASE_URL+REST_INDEX_AD_URL);
-            TaoTaoResult taoTaoResult = JSON.parseObject(httpResult,new TypeReference<TaoTaoResult>(){});
+            TaoTaoResult taoTaoResult = JSON.parseObject(httpResult,new TypeReference<TaoTaoResult<List<Map<String,Object>>>>(){});
             if (taoTaoResult.getStatus()==200) {
                 List<Map<String,Object>> contents = (List<Map<String, Object>>) taoTaoResult.getData();
                 List<Map> resultList = new ArrayList<>();
